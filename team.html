@@ -5,6 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team | Dispenza Lab</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Slideshow styles */
+    .slideshow-container {
+      max-width: 800px;
+      margin: 40px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .slide {
+      display: none;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 51, 102, 0.7);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    .slideshow-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .active-dot {
+      background-color: #003366;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -42,10 +95,59 @@
         <p>PhD Candidate. Focus: IgE mechanisms in allergic asthma.</p>
       </div>
     </section>
+
+    <section class="about">
+      <h3>Lab Life</h3>
+      <p>Take a look at some moments from our lab — conferences, experiments, team events, and celebrations.</p>
+
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="images/lab1.jpg" alt="Lab at work">
+          <div class="caption">The team in action during an experiment.</div>
+        </div>
+        <div class="slide">
+          <img src="images/conference.jpg" alt="Conference photo">
+          <div class="caption">Presenting research at the Allergy & Immunology Conference 2024.</div>
+        </div>
+        <div class="slide">
+          <img src="images/lab-event.jpg" alt="Team event">
+          <div class="caption">Celebrating a successful paper submission!</div>
+        </div>
+      </div>
+
+      <div class="slideshow-nav">
+        <span class="dot" onclick="showSlide(0)"></span>
+        <span class="dot" onclick="showSlide(1)"></span>
+        <span class="dot" onclick="showSlide(2)"></span>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
   </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+        dots[i].classList.toggle('active-dot', i === index);
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Auto-advance every 5 seconds
+    setInterval(nextSlide, 5000);
+    showSlide(0); // Initial slide
+  </script>
 </body>
 </html>
