@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Publications | Dispenza Lab</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .pub-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    h3.year {
+      border-bottom: 2px solid #003366;
+      margin-top: 40px;
+      padding-bottom: 5px;
+      color: #003366;
+    }
+
+    .pub-entry {
+      margin: 20px 0;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .pub-title a {
+      font-weight: bold;
+      color: #004a99;
+      text-decoration: none;
+    }
+
+    .pub-title a:hover {
+      text-decoration: underline;
+    }
+
+    .pub-authors {
+      font-style: italic;
+      color: #555;
+    }
+
+    .pub-journal {
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -22,21 +61,59 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="about">
-      <h3>Selected Publications</h3>
-      <p>Peer-reviewed articles highlighting our lab’s contributions to allergy research.</p>
+  <main class="pub-container">
+    <h2>Lab Publications</h2>
 
-      <ul>
-        <li><strong>Doe et al. (2024)</strong> - Mast cell-derived IL-13 and asthma progression. <em>Journal of Allergy & Clinical Immunology</em>.</li>
-        <li><strong>Smith et al. (2023)</strong> - Rapid diagnostic biosensor for peanut allergy. <em>Nature Biomedical Engineering</em>.</li>
-        <li><strong>Arce et al. (2022)</strong> - IgE epitope diversity in chronic urticaria. <em>Frontiers in Immunology</em>.</li>
-      </ul>
-    </section>
+    <h3 class="year">2025</h3>
+
+    <div class="pub-entry">
+      <div class="pub-title">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/34112345/" target="_blank">
+          IgE-Mediated Mast Cell Activation in Allergic Reactions
+        </a>
+      </div>
+      <div class="pub-authors">Arce B, Smith J, Dispenza M</div>
+      <div class="pub-journal">Journal of Immunology. 2025; 215(3):123-130.</div>
+    </div>
+
+    <h3 class="year">2024</h3>
+
+    <div class="pub-entry">
+      <div class="pub-title">
+        <a href="docs/dispenza2024_mastcells.pdf" target="_blank">
+          Mapping Allergen Exposure and Immune Response in Urban Environments
+        </a>
+      </div>
+      <div class="pub-authors">Dispenza M, Lee H, Patel R</div>
+      <div class="pub-journal">Allergy & Asthma Proceedings. 2024; 45(2):78-85.</div>
+    </div>
+
+    <div class="pub-entry">
+      <div class="pub-title">
+        <a href="https://www.nature.com/articles/s41590-022-01127-4" target="_blank">
+          Novel Antibody Therapies for Allergic Inflammation
+        </a>
+      </div>
+      <div class="pub-authors">Arce B, Gomez L, Dispenza M</div>
+      <div class="pub-journal">Nature Immunology. 2024; 25(1):12-20.</div>
+    </div>
+
+    <h3 class="year">2023</h3>
+
+    <div class="pub-entry">
+      <div class="pub-title">
+        <a href="https://doi.org/10.1016/j.jaci.2023.01.014" target="_blank">
+          Environmental Predictors of Asthma Exacerbation in Florida
+        </a>
+      </div>
+      <div class="pub-authors">Dispenza M, Wang T, Alvarez J</div>
+      <div class="pub-journal">Journal of Allergy and Clinical Immunology. 2023; 152(5):456-462.</div>
+    </div>
+
   </main>
 
   <footer>
-    <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
+    <p style="text-align:center; margin: 40px 0;">&copy; 2025 Dispenza Lab | All rights reserved.</p>
   </footer>
 </body>
 </html>
