@@ -2,48 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dispenza Lab | Home</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dispenza Lab | Allergy Research</title>
 
-    /* NAVIGATION BAR */
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .site-title {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-menu li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .nav-menu li a:hover,
-    .nav-menu li a.active {
-      text-decoration: underline;
-    }
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Dispenza Lab</h1>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     /* HERO SECTION */
     .hero-banner {
@@ -78,67 +58,30 @@
       to { opacity: 1; }
     }
 
-    /* ABOUT SECTION */
-    .about-section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+  <main class="container">
+    <section class="about">
+      <h3>About Our Lab</h3>
+      <p>The Dispenza Lab is focused on understanding the molecular and cellular mechanisms underlying allergic inflammation, with a mission to improve patient outcomes through translational research.</p>
+    </section>
 
-    .about-section h2 {
-      font-size: 2em;
-      color: #003366;
-      margin-bottom: 20px;
-    }
+    <section class="highlights">
+      <div class="card">
+        <h4>Research Focus</h4>
+        <p>We study the biology of mast cells, basophils, and IgE-mediated pathways in allergy and asthma.</p>
+      </div>
+      <div class="card">
+        <h4>Team Collaboration</h4>
+        <p>Our multidisciplinary team works across immunology, biomedical engineering, and clinical science.</p>
+      </div>
+      <div class="card">
+        <h4>Translational Impact</h4>
+        <p>We strive to translate bench research into novel diagnostics and therapies.</p>
+      </div>
+    </section>
+  </main>
 
-    .about-section p {
-      font-size: 1.1em;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      background-color: #f0f0f0;
-      margin-top: 60px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navigation -->
-  <header>
-    <div class="site-title">Dispenza Lab</div>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </header>
-
-  <!-- Hero Section -->
-  <div class="hero-banner">
-    <div class="hero-text">Pioneering Allergy Research</div>
-  </div>
-
-  <!-- About Section -->
-  <section class="about-section">
-    <h2>About the Lab</h2>
-    <p>
-      The Dispenza Lab is dedicated to advancing our understanding of allergic disease mechanisms and improving therapeutic outcomes for patients. 
-      We investigate immune responses related to IgE-mediated mast cell activation, develop novel allergy interventions, and map environmental allergen patterns. 
-      Our interdisciplinary team combines immunology, bioengineering, and translational science to address the most pressing challenges in allergy research.
-    </p>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    &copy; 2025 Dispenza Lab | All rights reserved.
+    <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
   </footer>
-
 </body>
 </html>
