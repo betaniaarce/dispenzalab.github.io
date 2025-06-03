@@ -5,25 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dispenza Lab | Allergy Research</title>
 
-  <!-- Fonts and CSS -->
+  <!-- Fonts and External Styles -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Dispenza Lab</h1>
-      <nav class="navbar">
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* NAVIGATION */
+    .site-header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 40px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    .navbar {
+      margin-top: 10px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-menu li a:hover {
+      text-decoration: underline;
+    }
 
     /* HERO SECTION */
     .hero-banner {
@@ -41,16 +65,40 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.5); /* Darkens background for contrast */
+      background-color: rgba(0, 0, 0, 0.35); /* Slight overlay for contrast */
+    }
+
+    .hero-text-container {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      animation: fadeIn 2s ease-in;
     }
 
     .hero-text {
-      position: relative;
       color: #fff;
       font-size: 2.5em;
       font-weight: bold;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
-      animation: fadeIn 2s ease-in;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      margin: 20px 0;
+    }
+
+    .fade-line {
+      height: 2px;
+      background: white;
+      margin: 0 auto;
+      width: 200px;
+      transform: scaleX(0);
+      transform-origin: center;
+      animation: growLine 1s ease-out forwards;
+    }
+
+    .fade-line:first-child {
+      animation-delay: 0.5s;
+    }
+
+    .fade-line:last-child {
+      animation-delay: 1.5s;
     }
 
     @keyframes fadeIn {
@@ -58,12 +106,98 @@
       to { opacity: 1; }
     }
 
+    @keyframes growLine {
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 2em;
+      color: #003366;
+    }
+
+    .about p {
+      font-size: 1.1em;
+    }
+
+    /* HIGHLIGHTS SECTION */
+    .highlights {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h4 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #eee;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Dispenza Lab</h1>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-banner">
+    <div class="hero-text-container">
+      <div class="fade-line"></div>
+      <div class="hero-text">Pioneering Allergy Research</div>
+      <div class="fade-line"></div>
+    </div>
+  </div>
+
+  <!-- About Section -->
   <main class="container">
     <section class="about">
       <h3>About Our Lab</h3>
       <p>The Dispenza Lab is focused on understanding the molecular and cellular mechanisms underlying allergic inflammation, with a mission to improve patient outcomes through translational research.</p>
     </section>
 
+    <!-- Highlights Section -->
     <section class="highlights">
       <div class="card">
         <h4>Research Focus</h4>
@@ -80,8 +214,10 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
   </footer>
+
 </body>
 </html>
