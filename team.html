@@ -6,7 +6,39 @@
   <title>Team | Dispenza Lab</title>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    /* Slideshow styles */
+    /* Team cards with images */
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .member-card {
+      width: 250px;
+      background: #f4f9ff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .member-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .member-card h4 {
+      margin: 10px 0 5px;
+    }
+
+    .member-card p {
+      font-size: 0.9em;
+      padding: 0 10px 10px;
+    }
+
+    /* Slideshow (same as previous) */
     .slideshow-container {
       max-width: 800px;
       margin: 40px auto;
@@ -18,13 +50,11 @@
 
     .slide {
       display: none;
-      position: relative;
     }
 
     .slide img {
       width: 100%;
       height: auto;
-      display: block;
     }
 
     .caption {
@@ -35,7 +65,6 @@
       width: 100%;
       text-align: center;
       padding: 10px;
-      font-size: 1em;
     }
 
     .slideshow-nav {
@@ -51,11 +80,17 @@
       background-color: #ccc;
       border-radius: 50%;
       display: inline-block;
-      transition: background-color 0.3s ease;
     }
 
     .active-dot {
       background-color: #003366;
+    }
+
+    footer {
+      text-align: center;
+      margin: 50px 0 20px;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
@@ -78,49 +113,69 @@
   <main class="container">
     <section class="about">
       <h3>Meet Our Team</h3>
-      <p>Our team brings together expertise in immunology, biomedical engineering, clinical science, and data analysis.</p>
     </section>
 
-    <section class="highlights">
-      <div class="card">
+    <div class="team-grid">
+      <div class="member-card">
+        <img src="images/pi.jpg" alt="Principal Investigator">
         <h4>Dr. [Lead PI Name]</h4>
         <p>Principal Investigator. Focus: allergic inflammation, mast cell signaling.</p>
       </div>
-      <div class="card">
+      <div class="member-card">
+        <img src="images/postdoc.jpg" alt="Postdoc">
         <h4>[Postdoc Name]</h4>
-        <p>Postdoctoral Fellow. Focus: transcriptomics in allergy models.</p>
+        <p>Postdoctoral Fellow. Specializing in transcriptomics and IgE signaling pathways.</p>
       </div>
-      <div class="card">
+      <div class="member-card">
+        <img src="images/gradstudent.jpg" alt="Graduate Student">
         <h4>[Graduate Student]</h4>
-        <p>PhD Candidate. Focus: IgE mechanisms in allergic asthma.</p>
+        <p>PhD Candidate. Researching allergic asthma and novel therapeutics.</p>
       </div>
-    </section>
+    </div>
 
     <section class="about">
       <h3>Lab Life</h3>
-      <p>Take a look at some moments from our lab — conferences, experiments, team events, and celebrations.</p>
-
       <div class="slideshow-container">
         <div class="slide">
           <img src="images/lab1.jpg" alt="Lab at work">
-          <div class="caption">The team in action during an experiment.</div>
+          <div class="caption">The team during an experiment session.</div>
         </div>
         <div class="slide">
           <img src="images/conference.jpg" alt="Conference photo">
-          <div class="caption">Presenting research at the Allergy & Immunology Conference 2024.</div>
+          <div class="caption">Presenting at Allergy & Immunology Conference 2024.</div>
         </div>
         <div class="slide">
           <img src="images/lab-event.jpg" alt="Team event">
           <div class="caption">Celebrating a successful paper submission!</div>
         </div>
       </div>
-
       <div class="slideshow-nav">
         <span class="dot" onclick="showSlide(0)"></span>
         <span class="dot" onclick="showSlide(1)"></span>
         <span class="dot" onclick="showSlide(2)"></span>
       </div>
     </section>
+
+    <section class="about">
+      <h3>Dispenza Lab Alumni</h3>
+    </section>
+    <div class="team-grid">
+      <div class="member-card">
+        <img src="images/alum1.jpg" alt="Alumni 1">
+        <h4>[Alumni 1]</h4>
+        <p>Now a Clinical Research Scientist at XYZ Pharmaceuticals.</p>
+      </div>
+      <div class="member-card">
+        <img src="images/alum2.jpg" alt="Alumni 2">
+        <h4>[Alumni 2]</h4>
+        <p>Assistant Professor at ABC University studying pediatric allergies.</p>
+      </div>
+      <div class="member-card">
+        <img src="images/alum3.jpg" alt="Alumni 3">
+        <h4>[Alumni 3]</h4>
+        <p>Immunology Specialist at NIH's Division of Allergy & Infectious Diseases.</p>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -145,9 +200,8 @@
       showSlide(currentSlide);
     }
 
-    // Auto-advance every 5 seconds
     setInterval(nextSlide, 5000);
-    showSlide(0); // Initial slide
+    showSlide(0);
   </script>
 </body>
 </html>
