@@ -2,60 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dispenza Lab | Allergy Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dispenza Lab | Home</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  <!-- Fonts and CSS -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+    .hero-section {
+      position: relative;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      font-size: 2.8em;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeIn 2.5s ease-in forwards;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .site-title {
+      font-size: 1.5em;
+      color: white;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-menu li a:hover {
+      color: #ffdd57;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Dispenza Lab</h1>
-      <nav class="navbar">
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+
+  <div class="hero-section">
+    <div class="navbar">
+      <div class="site-title">Dispenza Lab</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Pioneering Allergy Research</h2>
-      <p>Welcome to the Dispenza Lab. We explore immune responses and develop innovative treatments for allergic diseases.</p>
+    <div class="hero-text">
+      Pioneering Allergy Research
     </div>
-  </section>
+  </div>
 
-  <main class="container">
-    <section class="about">
-      <h3>About Our Lab</h3>
-      <p>The Dispenza Lab is focused on understanding the molecular and cellular mechanisms underlying allergic inflammation, with a mission to improve patient outcomes through translational research.</p>
-    </section>
-
-    <section class="highlights">
-      <div class="card">
-        <h4>Research Focus</h4>
-        <p>We study the biology of mast cells, basophils, and IgE-mediated pathways in allergy and asthma.</p>
-      </div>
-      <div class="card">
-        <h4>Team Collaboration</h4>
-        <p>Our multidisciplinary team works across immunology, biomedical engineering, and clinical science.</p>
-      </div>
-      <div class="card">
-        <h4>Translational Impact</h4>
-        <p>We strive to translate bench research into novel diagnostics and therapies.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
-  </footer>
 </body>
 </html>
